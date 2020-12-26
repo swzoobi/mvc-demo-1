@@ -11218,7 +11218,7 @@ var increase = (0, _jquery.default)('#increase');
 var decrease = (0, _jquery.default)('#decrease');
 var multiply = (0, _jquery.default)('#multiply');
 var divide = (0, _jquery.default)('#divide');
-var num = localStorage.getItem('app1Num') || 100;
+var num = Number(localStorage.getItem('app1Num')) || 100;
 (0, _jquery.default)('span.output').text(num);
 
 var show = function show() {
@@ -11326,4 +11326,4 @@ require("./app3.js");
 
 require("./app4.js");
 },{"./reset.css":"AQoi","./style.css":"AQoi","./app1.js":"US5u","./app2.js":"vZ5o","./app3.js":"y8lT","./app4.js":"eWpN"}]},{},["epB2"], null)
-//# sourceMappingURL=main.10fe09ea.js.map
+//# sourceMappingURL=main.5ec55911.js.map

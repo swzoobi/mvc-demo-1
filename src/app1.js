@@ -6,7 +6,7 @@ const decrease = $('#decrease');
 const multiply = $('#multiply');
 const divide = $('#divide');
 
-let num = localStorage.getItem('app1Num') || 100 ;
+let num = Number(localStorage.getItem('app1Num')) || 100 ;
 $('span.output').text(num)
 
 const show = () =>{
