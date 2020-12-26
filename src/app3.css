@@ -1,0 +1,62 @@
+#app3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ballWrap {
+  width: 300px;
+}
+
+#ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: relative;
+}
+
+#ball::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+#ball.start {
+  margin-left: 10px;
+}
+
+#ball.end {
+  margin-left: 200px;
+}
+
+#ball.toStart {
+  animation: roll 2s linear forwards reverse;
+}
+
+#ball.toEnd {
+  animation: roll 2s linear forwards;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    margin-left: 10px;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    margin-left: 100px;
+  }
+  100% {
+    transform: rotate(360deg);
+    margin-left: 200px;
+  }
+}

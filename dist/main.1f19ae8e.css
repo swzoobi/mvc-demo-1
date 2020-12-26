@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#app > div {
+  width: 50%;
+  height: 50vh;
+  border: 1px solid #000;
+  overflow: auto;
+}
+
+#app1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#app1 .output {
+  font-size: 64px;
+}
+
+#app1 button {
+  margin-top: 10px;
+  width: 50px;
+  height: 25px;
+}
+
+#app2 {
+  display: flex;
+  flex-direction: column;
+}
+#nav {
+  display: flex;
+}
+
+#nav li {
+  display: inline-block;
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f00;
+}
+
+#nav li.active {
+  background-color: #f00;
+  color: #fff;
+}
+
+#content {
+  flex-grow: 1;
+}
+#content > div {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  display: none;
+}
+
+#content > div.show {
+  display: flex;
+}
+
+#app3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ballWrap {
+  width: 300px;
+}
+
+#ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: relative;
+}
+
+#ball::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+#ball.start {
+  margin-left: 10px;
+}
+
+#ball.end {
+  margin-left: 200px;
+}
+
+#ball.toStart {
+  animation: roll 2s linear forwards reverse;
+}
+
+#ball.toEnd {
+  animation: roll 2s linear forwards;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    margin-left: 10px;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    margin-left: 100px;
+  }
+  100% {
+    transform: rotate(360deg);
+    margin-left: 200px;
+  }
+}
+
+#square {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  margin: 100px auto;
+  cursor: pointer;
+}
+
+#square.black {
+  animation: transColor 3s linear forwards;
+}
+
+@keyframes transColor {
+  0% {
+    background-color: red;
+  }
+  14% {
+    background-color: orange;
+  }
+  28% {
+    background-color: yellow;
+  }
+  42% {
+    background-color: green;
+  }
+  56% {
+    background-color: blue;
+  }
+  70% {
+    background-color: purple;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */

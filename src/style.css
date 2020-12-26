@@ -1,0 +1,13 @@
+#app {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#app > div {
+  width: 50%;
+  height: 50vh;
+  border: 1px solid #000;
+  overflow: auto;
+}

@@ -1,0 +1,35 @@
+#square {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  margin: 100px auto;
+  cursor: pointer;
+}
+
+#square.black {
+  animation: transColor 3s linear forwards;
+}
+
+@keyframes transColor {
+  0% {
+    background-color: red;
+  }
+  14% {
+    background-color: orange;
+  }
+  28% {
+    background-color: yellow;
+  }
+  42% {
+    background-color: green;
+  }
+  56% {
+    background-color: blue;
+  }
+  70% {
+    background-color: purple;
+  }
+  100% {
+    background-color: black;
+  }
+}
